@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Douglas Wilhelm -- Developer -- github.com/dwilhel1
+
+# THANKS
+
+    Bill Mitchell, for your pillar of friendship and your patience.
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css

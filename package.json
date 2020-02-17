@@ -13,5 +13,8 @@
   ],
   "author": "Douglas Wilhelm",
   "license": "ISC",
-  "homepage": "https://billmitchell.online"
+  "homepage": "https://billmitchell.online",
+  "dependencies": {
+    "html5-boilerplate": "^7.3.0"
+  }
 }
