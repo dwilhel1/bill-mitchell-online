@@ -11,10 +11,24 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+:root {
+  --theme-color-red: #ff0000;
+  --theme-color-cyan: #00ffff;
+  --theme-color-purple: #b19cd9;
+  --theme-color-blue: #00376f;
+  font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
 html {
-  color: #222;
+  color: #212b36;
   font-size: 1em;
   line-height: 1.4;
+}
+
+h1,
+p,
+span {
+  margin: 0;
 }
 
 /*
@@ -97,6 +111,166 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+body {
+  display: grid;
+  grid-template-rows: 100vh auto auto auto auto auto auto;
+}
+
+header {
+  color: white;
+  justify-items: center;
+  align-items: center;
+  display: grid;
+  background-image: linear-gradient(rgba(177,156,217,.9) 30%, rgba(0,55,111,.9)), url("../img/svg/topography.svg");
+  box-shadow: inset 0 -50px 30px -25px rgb(0, 55, 111);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 1rem;
+  z-index: 999;
+}
+
+.nav-container {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container:root {
+  transition: all 0.35s ease;
+}
+
+.nav-container li {
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+  margin: 0.4em 0.8em;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+.nav-container a {
+  padding: 0 0.7em;
+  color: rgba(255, 255, 255, 0.75);
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-container a:before {
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+  left: 15%;
+  right: 15%;
+  top: 0;
+  bottom: 0;
+  border-left: 3px solid var(--theme-color-purple);
+  border-right: 3px solid var(--theme-color-purple);
+}
+
+.nav-container a:hover,
+.nav-container .current a {
+  color: #fff;
+}
+
+.nav-container a:hover:before,
+.nav-container .current a:before {
+  opacity: 1;
+  left: 0;
+  right: 0;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: minmax(auto, 600px);
+  justify-content: center;
+  justify-items: center;
+  grid-gap: 1rem;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+}
+
+.certs {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.certs img {
+  max-width: 150px;
+}
+
+.contact {
+  display: grid;
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.elevation-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.elevation-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.elevation-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.elevation-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.color-white {
+  color: white;
+}
+
+.color-background-blue {
+  background-color: var(--theme-color-blue);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.m-5 {
+  margin: 5px;
+}
+
+.my-5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.gap-b-1 {
+  margin-bottom: 1rem;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.h-rule {
+  height: 4px;
+  width: 200px;
+  background: var(--theme-color-blue);
+}
 
 /* ==========================================================================
    Helper classes
@@ -262,4 +436,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
