@@ -2,7 +2,7 @@
   "name": "bill-mitchell-online",
   "version": "0.1.0",
   "description": "Bill Mitchell Online",
-  "main": "index.html",
+  "main": "dist/index.html",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dwilhel1/bill-mitchell-online.git"
