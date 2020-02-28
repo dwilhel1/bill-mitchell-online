@@ -172,7 +172,7 @@ nav {
 .nav-container li {
   display: inline-block;
   cursor: pointer;
-  margin: 0.4em 0.8em;
+  margin: 0 0.8em;
   padding: 0;
   letter-spacing: 1px;
 }
@@ -372,6 +372,33 @@ nav {
 
 .bold {
   font-weight: bold;
+}
+
+/*** Media Queries ***/
+@media screen and (max-width: 535px) {
+  .nav-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 535px) {
+  .nav-menu-button {
+    display: none !important;
+  }
+}
+
+/*** Animations ***/
+.fade-in {
+  animation: fadeIn ease 800ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 /* ==========================================================================

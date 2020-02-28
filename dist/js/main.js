@@ -1,9 +1,13 @@
-const animate = function(className = '') {
+const scrollToSection = function(className = '') {
   $('html,body').animate({
       scrollTop: $(className).offset().top - 80},
     'slow');
 };
 
-$(".nav-home").click(() => animate('header'));
-$(".nav-about").click(() => animate('.about'));
-$(".nav-contact").click(() => animate('.contact'));
+$(".nav-home").click(() => scrollToSection('header'));
+$(".nav-about").click(() => scrollToSection('.about'));
+$(".nav-contact").click(() => scrollToSection('.contact'));
+
+$(".nav-menu-button").click(() => {
+  // TODO: Add menu logic
+});
